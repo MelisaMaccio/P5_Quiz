@@ -7,9 +7,12 @@
   <body>
     <h1><%= title %></h1>
     <u>
-     <%for (var i = 0; i < quizzes.length; i++) {%>
-        <li>¿<%quizzes[i].question;%>? <%quizzes[i].answer;%></li>
-      <%}%>
+      <%for (var i in quizzes) {%>
+        <li>
+        ¿<%=quizzes[i].question%>? <%=quizzes[i].answer%>
+        </li>
+      <%}
+      %>
       </u>
       <a href="/">Volver a Home</a>
   </body>

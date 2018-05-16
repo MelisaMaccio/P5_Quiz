@@ -15,9 +15,11 @@ router.get('/credits', function(req, res, next) {
 router.get('/quizzes', function(req, res, next) {
   models.quiz.findAll()
   .then(quizzes => {
-    res.render('quizzes', { title: 'Quizzes' });
+    res.render('quizzes', { quizzes: quizzes });
   })
   .catch(error => next(error));
 });
+
+
 
 module.exports = router;

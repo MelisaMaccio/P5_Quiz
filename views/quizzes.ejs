@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Lista de quizzes</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1>Lista de quizzes</h1>
     <u>
-      <%for (var i in quizzes) {%>
+      <%for (let i= 0; i<quizzes.length; i++) {%>
         <li>
-        ¿<%=quizzes[i].question%>? <%=quizzes[i].answer%>
+        <p>¿<%=quizzes[i].question%>? <%=quizzes[i].answer%></p>
         </li>
-      <%}
-      %>
+      <% } %>
       </u>
       <a href="/">Volver a Home</a>
   </body>
